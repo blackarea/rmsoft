@@ -3,7 +3,7 @@
 REPOSITORY=/home/ec2-user/rmsoft
 PROJECT_NAME=rmsoft
 
-cp $REPOSITORY/build/libs/*.jar $REPOSITORY/
+cp $REPOSITORY/build/libs/*SHOT.jar $REPOSITORY/
 
 CURRENT_PID=$(pgrep -f ${PROJECT_NAME}.*.jar)
 
@@ -21,4 +21,6 @@ cd $REPOSITORY
 
 echo "> 새 어플리케이션 배포"
 JAR_NAME=$(ls -tr $REPOSITORY/*.jar | tail -n 1)
-nohup java -jar $REPOSITORY/$JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
+chmod +x $JAR_NAME
+
+nohup java -jar $JAR_NAME > nohup.out 2>&1 &

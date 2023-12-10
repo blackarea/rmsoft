@@ -42,7 +42,8 @@ jobs:
         run: aws s3 cp --region ap-northeast-2 ./$GITHUB_SHA.zip s3://$S3_BUCKET_NAME/$GITHUB_SHA.zip
 
       - name : AWS CodeDeploy
-        run: aws deploy create-deployment \
+        run: | 
+          aws deploy create-deployment \
           --application-name $CODEDEPLOY_NAME \
           --deployment-group-name $CODEDEPLOY_GROUP \
           --file-exists-behavior OVERWRITE \
