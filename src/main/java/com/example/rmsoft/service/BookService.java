@@ -17,20 +17,22 @@ public class BookService {
         int result = bookMapper.insert(book);
     }
 
-    public Book getBookById(long book_id){
-        return bookMapper.getBookById(book_id);
+    @Transactional(readOnly = true)
+    public Book getBookById(long bookId){
+        return bookMapper.getById(bookId);
     }
 
+    @Transactional(readOnly = true)
     public Book getBookByName(String name){
-        return bookMapper.getBookByName(name);
+        return bookMapper.getByName(name);
     }
 
     public void update(Book book){
         bookMapper.update(book);
     }
 
-    public void delete(long book_id){
-        bookMapper.delete(book_id);
+    public void delete(long bookId){
+        bookMapper.delete(bookId);
     }
 
 }

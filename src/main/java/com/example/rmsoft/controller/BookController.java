@@ -19,9 +19,9 @@ public class BookController {
         return new BaseResponse<>();
     }
 
-    @GetMapping("/{book_id}")
-    public BaseResponse<Book> getBookById(@PathVariable long book_id) {
-        return new BaseResponse<>(bookService.getBookById(book_id));
+    @GetMapping("/{bookId}")
+    public BaseResponse<Book> getBookById(@PathVariable long bookId) {
+        return new BaseResponse<>(bookService.getBookById(bookId));
     }
 
     @PutMapping("")
@@ -30,9 +30,9 @@ public class BookController {
         return new BaseResponse<>();
     }
 
-    @DeleteMapping("/{book_id}")
-    public BaseResponse<Void> deleteBook(@PathVariable long book_id) {
-        bookService.delete(book_id);
+    @DeleteMapping("/{bookId}")
+    public BaseResponse<Void> deleteBook(@PathVariable long bookId) {
+        bookService.delete(bookId);
         return new BaseResponse<>();
     }
 }
