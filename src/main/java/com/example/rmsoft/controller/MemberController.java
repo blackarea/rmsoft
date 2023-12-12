@@ -19,9 +19,9 @@ public class MemberController {
         return new BaseResponse<>();
     }
 
-    @GetMapping("/{memberId}")
-    public BaseResponse<Member> getById(@PathVariable long memberId){
-        return new BaseResponse<>(memberService.getById(memberId));
+    @GetMapping("/{id}")
+    public BaseResponse<Member> getById(@PathVariable String id){
+        return new BaseResponse<>(memberService.getById(id));
     }
 
 }

@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.*;
 @Mapper
 public interface BookMapper {
 
-    @Insert("insert into BOOK(ISBN, name, author, publisher, pubDate)" +
+    @Insert("insert into BOOK(ISBN, name, author, publisher, pub_date) " +
             "values (#{ISBN}, #{name}, #{author}, #{publisher}, #{pubDate})")
     @Options(useGeneratedKeys = true, keyProperty = "bookId")
     int insert(Book book);

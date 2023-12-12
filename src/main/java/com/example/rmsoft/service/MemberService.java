@@ -19,8 +19,8 @@ public class MemberService {
     }
 
     @Transactional(readOnly = true)
-    public Member getById(long memberId){
-        return memberMapper.getById(memberId);
+    public Member getById(String id){
+        return memberMapper.getById(id);
     }
 
 }

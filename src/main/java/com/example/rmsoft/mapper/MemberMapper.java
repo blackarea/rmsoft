@@ -11,7 +11,7 @@ public interface MemberMapper {
     @Options(useGeneratedKeys = true, keyProperty = "memberId")
     int insert(Member member);
 
-    @Select("SELECT * FROM MEMBER WHERE member_id = #{memberId}")
-    Member getById(long memberId);
+    @Select("SELECT * FROM MEMBER WHERE id = #{id}")
+    Member getById(String id);
 
 }
