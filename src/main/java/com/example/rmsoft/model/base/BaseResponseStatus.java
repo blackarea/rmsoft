@@ -5,7 +5,8 @@ import lombok.Getter;
 @Getter
 public enum BaseResponseStatus {
     SUCCESS(true, 1000, "요청에 성공하였습니다."),
-    FAIL(false, 2000, "요청에 실패하였습니다.");
+    FAIL(false, 2000, "요청에 실패하였습니다."),
+    SIGNUP_FAIL(false, 2001, "ID가 중복된 회원이 있습니다.");
 
     private final boolean isSuccess;
     private final String message;
