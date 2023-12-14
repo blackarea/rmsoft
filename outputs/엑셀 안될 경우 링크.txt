@@ -1,0 +1,5 @@
+테이블 정의서 스프레드시트 링크
+https://docs.google.com/spreadsheets/d/1VIUR0Y_4LoupmlkC8wPDgBKCfDqlFasrS2yT6y0-SLU/edit?usp=sharing
+
+API명세서 스프레드시트 링크
+https://docs.google.com/spreadsheets/d/16X5aP_SMv5hUiJSlLWs7kR1jkwe2dVGouwA46ZonjFg/edit?usp=sharing

@@ -1,0 +1,9 @@
+Server : AWS EC2
+Database : AWS RDS(MySql)
+for 배포 자동화 : Github Actions, AWS S3, AWS CodeDeploy
+
+프로젝트 동작 과정 :  Git의 메인 브랜치로 푸쉬를 하게 된다면, 
+Github Actions는 이를 감지해 프로젝트를 테스트하고 빌드한 다음,
+ 압축하여 AWS S3에 업로드합니다. 
+그후 AWS CodeDeploy를 S3에 있는 파일을 EC2로 가져와 압축을 해제하고, 
+배포 스크립트 파일에 의해 Jar 파일을 실행해 서버가 동작하게 됩니다.
